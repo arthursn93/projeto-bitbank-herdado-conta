@@ -6,42 +6,36 @@ public abstract class Conta {
 	private static int total;
 	
 	public Conta(int agencia, int numero) {	
-		if(agencia  >= 0 || numero >= 0) {
-			this.agencia = agencia;
-			this.numero = numero;
-			total++;
-		}else {
-			System.out.println("Não pode número negativo.");
-		}			
+		if(agencia  < 0 || numero < 0) {
+			throw new ContaException("O número e agência da sua conta deve ser positivo.");
+		}
+		this.agencia = agencia;
+		this.numero = numero;
+		total++;		
 	}
 	
 	public abstract void depositar(double valor, Conta destino);
 	
-	public boolean sacar(double valor, Conta destino) {
-		if(this.saldo >= 0) {
-			this.saldo -= valor;
-			destino.depositar(valor, destino);	
-			return true;
-		}else {		
-			return false;
+	public void sacar(double valor) {
+		if(this.saldo < valor) {
+			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor );
 		}
+		else if(valor < 0) {
+			throw new IllegalArgumentException("Apenas números positivos...");
+		}
+		this.saldo -= valor;
 	}
 	
-	public boolean transfere(double valor, Conta destino) {
-		if(this.sacar(valor, destino)) {			
-			return true;
-		}else {
-			System.out.println("Você não tem dinheiro para realizar transferência!");
-			return false;
-		}
+	public void transfere(double valor, Conta destino) {
+		this.sacar(valor);
+		destino.depositar(valor, destino);
 	}
 	
 	public void setSaldo(double saldo) {
-		if(this.saldo <= 0) {
-			System.out.println("Saldo insuficiente ou inválido!");
-		}else {
-			this.saldo = saldo;
+		if(saldo < 0) {
+			throw new IllegalArgumentException("Apenas números positivos...");
 		}
+		this.saldo = saldo;
 	}
 	public void setNumero(int numero) {
 		this.numero = numero;

@@ -22,7 +22,7 @@ public class TestaConta2 {
 		
 		System.out.println("-----------------");
 
-		cc.sacar(20,cp);
+		cc.sacar(20);
 		System.out.println(cc.getSaldo());
 		System.out.println(cp.getSaldo());
 		

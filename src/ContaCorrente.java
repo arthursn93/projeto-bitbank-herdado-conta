@@ -3,24 +3,21 @@ public class ContaCorrente extends Conta implements Tributavel {
 
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero);
-
 	}
 	
 	@Override
-	public boolean sacar(double valor, Conta destino) {
-		return super.sacar(valor, destino);
+	public void sacar(double valor) {
+		super.sacar(valor);
 	}
 
 	@Override
-	public boolean transfere(double valor, Conta destino) {
-		return super.transfere(valor, destino);
+	public void transfere(double valor, Conta destino) {
+		super.transfere(valor, destino);
 	}
 
 	@Override
 	public void depositar(double valor, Conta destino) {
-		this.saldo += valor;
-		return;
-
+		super.saldo += valor;
 	}
 
 	@Override
