@@ -1,4 +1,4 @@
-package modelo;
+package br.com.bitbank.banco.modelo;
 
 public class ContaPoupanca extends Conta {
 

@@ -1,8 +1,6 @@
-package teste;
+package br.com.bitbank.banco.teste;
 
-import modelo.CalculadorImposto;
-import modelo.ContaCorrente;
-import modelo.SeguroDeVida;
+import br.com.bitbank.banco.modelo.*;
 
 public class TestaConta3 {
 

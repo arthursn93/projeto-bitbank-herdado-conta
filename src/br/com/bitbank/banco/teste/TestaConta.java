@@ -1,9 +1,6 @@
-package teste;
+package br.com.bitbank.banco.teste;
 
-import modelo.Cliente;
-import modelo.Conta;
-import modelo.ContaCorrente;
-import modelo.ContaPoupanca;
+import br.com.bitbank.banco.modelo.*;
 
 public class TestaConta {
 
