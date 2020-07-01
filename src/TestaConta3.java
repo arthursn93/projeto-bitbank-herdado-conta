@@ -7,7 +7,7 @@ public class TestaConta3 {
 		ContaCorrente cd = new ContaCorrente(231,232323);
 		
 		
-		cc.depositar(2000, cc);
+		cc.depositar(2000);
 		
 		SeguroDeVida seguro = new SeguroDeVida();
 		
@@ -20,7 +20,7 @@ public class TestaConta3 {
 		
 		
 		//cd.setSaldo(200);
-		cd.depositar(-200, cc);
+		cd.depositar(-200);
 		cd.transfere(200, cc);
 				
 		System.out.println(cd.getSaldo());

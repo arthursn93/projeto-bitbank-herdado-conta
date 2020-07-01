@@ -16,8 +16,8 @@ public class ContaCorrente extends Conta implements Tributavel {
 	}
 
 	@Override
-	public void depositar(double valor, Conta destino) {
-		super.saldo += valor;
+	public void depositar(double valor) {
+		super.depositar(valor);
 	}
 
 	@Override

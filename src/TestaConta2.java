@@ -11,9 +11,9 @@ public class TestaConta2 {
 		cc.setSaldo(2000);
 		cp.setSaldo(1500);
 		
-		cc.depositar(200,cp);
+		cc.depositar(200);
 		
-		cp.depositar(200,cc);
+		cp.depositar(200);
 		
 		
 		cc.transfere(100, cp);

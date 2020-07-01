@@ -14,8 +14,6 @@ public abstract class Conta {
 		total++;		
 	}
 	
-	public abstract void depositar(double valor, Conta destino);
-	
 	public void sacar(double valor) {
 		if(this.saldo < valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor );
@@ -26,9 +24,16 @@ public abstract class Conta {
 		this.saldo -= valor;
 	}
 	
+	public void depositar(double valor) {
+		if(valor < 0) {
+			throw new IllegalArgumentException("Apenas números positivos...");
+		}
+		this.saldo += valor;
+	}
+	
 	public void transfere(double valor, Conta destino) {
 		this.sacar(valor);
-		destino.depositar(valor, destino);
+		destino.depositar(valor);
 	}
 	
 	public void setSaldo(double saldo) {

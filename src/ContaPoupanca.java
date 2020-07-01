@@ -6,7 +6,7 @@ public class ContaPoupanca extends Conta {
 	}
 
 	@Override
-	public void depositar(double valor, Conta destino) {
+	public void depositar(double valor) {
 		this.saldo += valor;
 		return;
 	}

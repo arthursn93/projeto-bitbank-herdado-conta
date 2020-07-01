@@ -8,7 +8,7 @@ public class TestaConta4 {
 		
 		ccArthur.setSaldo(2000);
 		//ccRicardo.setSaldo(250);
-		ccArthur.depositar(250, ccArthur);
+		//ccArthur.depositar(250, ccArthur);
 		
 		System.out.println("Arthur: " + ccArthur.getSaldo()); // ok!
 		
@@ -16,11 +16,11 @@ public class TestaConta4 {
 		
 		System.out.println("Arthur depois de sacar: " + ccArthur.getSaldo());
 		
-		ccArthur.transfere(100, ccRicardo); // nao transfere valor para outra Conta!
+		ccArthur.transfere(100, ccRicardo); // ok!
 		
 		System.out.println("Ricardo c/ transferencia: " + ccRicardo.getSaldo());
 		
-		ccArthur.depositar(300, ccRicardo); // nao deposita valor para outra Conta!
+		ccRicardo.depositar(300); // ok!
 		
 		System.out.println("Ricardo c/ deposito recebido: " + ccRicardo.getSaldo());
 	}
