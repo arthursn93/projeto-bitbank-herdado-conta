@@ -1,3 +1,9 @@
+package teste;
+
+import modelo.Cliente;
+import modelo.Conta;
+import modelo.ContaCorrente;
+import modelo.ContaPoupanca;
 
 public class TestaConta {
 

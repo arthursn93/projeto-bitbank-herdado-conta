@@ -1,3 +1,6 @@
+package teste;
+
+import modelo.ContaCorrente;
 
 public class TestaConta4 {
 
