@@ -1,5 +1,9 @@
 package br.com.bitbank.banco.modelo;
-
+/**
+ * Classe representa a moldura de uma conta
+ * @author arthurnunes
+ *
+ */
 public abstract class Conta {
 	protected double saldo;
 	private int agencia;
@@ -7,6 +11,11 @@ public abstract class Conta {
 	private Cliente titular = new Cliente(null, null, null);
 	private static int total;
 	
+	/**
+	 * Construtor para inicializar o objeto Conta a partir do número e agência.
+	 * @param agencia
+	 * @param numero
+	 */
 	public Conta(int agencia, int numero) {	
 		if(agencia  < 0 || numero < 0) {
 			throw new ContaException("O número e agência da sua conta deve ser positivo.");
@@ -15,7 +24,10 @@ public abstract class Conta {
 		this.numero = numero;
 		total++;		
 	}
-	
+	/**
+	 * Método para sacar. Se o saldo for menor que o valor ou menor que 0, é jogada uma Exceção.
+	 * @param valor
+	 */
 	public void sacar(double valor) {
 		if(this.saldo < valor) {
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor );

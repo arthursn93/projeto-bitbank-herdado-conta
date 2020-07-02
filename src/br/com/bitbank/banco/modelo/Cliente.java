@@ -1,11 +1,21 @@
 package br.com.bitbank.banco.modelo;
-
+/**
+ * Classe que representa um cliente Bitbank
+ * @author arthurnunes
+ * 
+ */
 public class Cliente {
 	
 	private String nome;
 	private String cpf;
 	private String profissao;
 	
+	/**
+	 * Construtor para inicializar o objeto Cliente a partir do nome, cpf e profissão
+	 * @param nome
+	 * @param cpf
+	 * @param profissao
+	 */
 	public Cliente(String nome, String cpf, String profissao) {
 		this.nome = nome;
 		this.cpf = cpf;
