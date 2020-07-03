@@ -37,14 +37,21 @@ public abstract class Conta {
 		}
 		this.saldo -= valor;
 	}
-	
+	/** Método para depositar um valor. Se o valor for menor que 0, é jogada uma Exceção.
+	 * 
+	 * @param valor
+	 */	
 	public void depositar(double valor) {
 		if(valor < 0) {
 			throw new IllegalArgumentException("Apenas números positivos...");
 		}
 		this.saldo += valor;
 	}
-	
+	/**
+	 * Método para transferir um valor em uma Conta destino.
+	 * @param valor
+	 * @param destino
+	 */
 	public void transfere(double valor, Conta destino) {
 		this.sacar(valor);
 		destino.depositar(valor);
