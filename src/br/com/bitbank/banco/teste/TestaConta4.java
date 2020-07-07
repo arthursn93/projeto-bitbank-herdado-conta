@@ -1,9 +1,9 @@
 package br.com.bitbank.banco.teste;
 
 import br.com.bitbank.banco.modelo.*;
-
+//br.com.bitbank.banco.teste.TestaConta4
 public class TestaConta4 {
-
+	//java.lang.String
 	public static void main(String[] args) {
 		
 		ContaCorrente ccArthur = new ContaCorrente(123,123123);
