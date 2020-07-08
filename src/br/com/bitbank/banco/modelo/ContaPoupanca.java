@@ -21,5 +21,10 @@ public class ContaPoupanca extends Conta {
 		this.saldo += valor;
 		return;
 	}
+	
+	@Override
+	public String toString() {
+		return "ContaPoupança , " + super.toString();
+	}
 
 }
