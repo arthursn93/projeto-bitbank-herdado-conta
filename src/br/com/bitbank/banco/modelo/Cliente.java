@@ -41,5 +41,10 @@ public class Cliente {
 		return this.profissao;
 	}
 	
+	@Override
+	public String toString() {
+		return "Nome: " + this.nome + " / CPF: " + this.cpf + " / Profissão: " + this.profissao;
+	}
+	
 }
 
