@@ -7,7 +7,7 @@ public class TesteArrayReferencias {
 	public static void main(String[] args) {
 		//Object é termo genérico pra qualquer tipo de classe, variável, etc...
 		Object[] objeto = new Object[5];
-		Cliente cliente = new Cliente("Jon", "333.333.333-33", "Programador");
+		Cliente cliente = new Cliente("333.333.333-33");
 		objeto[3] = cliente;
 		System.out.println(objeto[3].toString());
 		//Array armazena objetos
@@ -52,8 +52,8 @@ public class TesteArrayReferencias {
 			System.out.println(refs[i]);
 		}
 		
-		Cliente clienteNormal = new Cliente("Osmar", "033.333.333-33", "Designer");		
-		Cliente clienteVip = new Cliente("Pedro", "133.333.333-33", "Engenheiro");
+		Cliente clienteNormal = new Cliente("033.333.333-33");		
+		Cliente clienteVip = new Cliente("133.333.333-33");
 		clienteVip.setNome("Marcelo");
 		Object[] rf = new Object[5];
 		rf[0] = clienteNormal;

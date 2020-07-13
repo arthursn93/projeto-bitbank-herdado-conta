@@ -16,10 +16,8 @@ public class Cliente {
 	 * @param cpf
 	 * @param profissao
 	 */
-	public Cliente(String nome, String cpf, String profissao) {
-		this.nome = nome;
+	public Cliente(String cpf) {
 		this.cpf = cpf;
-		this.profissao = profissao;
 	}
 	
 	public void setNome(String nome) {
@@ -28,9 +26,7 @@ public class Cliente {
 	public String getNome() {
 		return this.nome;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	
 	public String getCpf() {
 		return this.cpf;
 	}
@@ -43,7 +39,7 @@ public class Cliente {
 	
 	@Override
 	public String toString() {
-		return "Nome: " + this.nome + " / CPF: " + this.cpf + " / Profissão: " + this.profissao;
+		return "CPF: " + this.cpf;
 	}
 	
 }

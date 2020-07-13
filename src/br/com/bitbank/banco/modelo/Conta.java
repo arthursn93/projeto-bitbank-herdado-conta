@@ -8,7 +8,7 @@ public abstract class Conta {
 	protected double saldo;
 	private int agencia;
 	private int numero;
-	private Cliente titular = new Cliente(null, null, null);
+	private Cliente titular = new Cliente(null);
 	private static int total;
 	
 	/**

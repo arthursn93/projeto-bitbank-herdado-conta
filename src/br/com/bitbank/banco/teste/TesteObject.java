@@ -12,7 +12,7 @@ public class TesteObject {
 		
 		Object cc = new ContaCorrente(123,123123);
 		Object cp = new ContaPoupanca(231,231242);
-		Object cl = new Cliente("Arthur","333.333.333-33","Engenheiro");
+		Object cl = new Cliente("333.333.333-33");
 		
 		System.out.println(cc);
 		System.out.println(cp);
