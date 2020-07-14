@@ -6,7 +6,7 @@ import java.util.List;
 
 import br.com.bitbank.banco.modelo.*;
 
-public class Teste {
+public class TesteOrdenacao {
 
 	public static void main(String[] args) {
 
@@ -44,11 +44,13 @@ public class Teste {
 			System.out.println(conta + ", " + conta.getTitular().getNome());
 		}
 
-		NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-		TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-		
-		System.out.println("---------");
-		lista.sort(titularComparator);
+		//NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+		System.out.println("-------------------------------------------");
+		lista.sort(null); 
+		//lista.sort(new TitularDaContaComparator());
+		//Collections.sort(lista, new TitularDaContaComparator());
+		//Collections.sort(lista);
+		//Collections.reverse(lista);
 
 		for (Conta conta : lista) {
 			System.out.println(conta + ", " + conta.getTitular().getNome());
@@ -71,15 +73,19 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
+		
+		return Integer.compare(c1.getNumero(), c2.getNumero());
+		
+//		return c1.getNumero() - c2.getNumero();
 
-		if (c1.getNumero() < c2.getNumero()) {
-			return -1;
-		}
-
-		if (c1.getNumero() > c2.getNumero()) {
-			return 1;
-		}
-
-		return 0;
+//		if (c1.getNumero() < c2.getNumero()) {
+//			return -1;
+//		}
+//
+//		if (c1.getNumero() > c2.getNumero()) {
+//			return 1;
+//		}
+//
+//		return 0;
 	}
 }
