@@ -1,10 +1,11 @@
 package br.com.bitbank.banco.modelo;
+
 /**
  * Classe que representa um cliente Bitbank
  * @author arthurnunes
  * 
  */
-public class Cliente {
+public class Cliente{
 	
 	private String nome;
 	private String cpf;

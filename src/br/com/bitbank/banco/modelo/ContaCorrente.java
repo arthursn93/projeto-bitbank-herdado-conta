@@ -1,11 +1,11 @@
 package br.com.bitbank.banco.modelo;
+
 /**
  * Classe que representa uma conta corrente bitbank
  * @author arthurnunes
  *
  */
 public class ContaCorrente extends Conta implements Tributavel {
-	
 	/**
 	 * Construtor para inicializar o objeto Conta Corrente a partir do número e agência.
 	 * @param agencia
